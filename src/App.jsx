@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div className='bg-blue-300'>App</div>
-      <Button>The Shadcn Button</Button>
+      {/* <Button>The Shadcn Button</Button> */}
     </>
   )
 }
