@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <div className="footer ">
-        <div className='footer-content bg-green-100 text-l text-green-600 font-bold'>
+        <div className='footer-content bg-blue-100 text-l text-blue-600 font-bold'>
             <div>
-                <p className='text-3xl text-green-600 font-bold font-serif italic'>Phone-Hub</p>
-                <p>Address: Nairobi CBD, Kenya.</p>
-                <p>Email: hello@phone-hub.com</p>
-                <p>Tel: +254 (0) 768 140150</p>
+                <p className='text-3xl text-blue-600 font-bold font-serif italic'>BinaryTronics</p>
+                <p>Address: Dar es Salaam, Tanzania.</p>
+                <p>Email: hello@binary-tronics.com</p>
+                <p>Tel: +255 (0) 768 140150</p>
 
             </div>
             <div>
@@ -35,7 +35,7 @@ function Footer() {
                 </nav>
             </div>
         </div>
-        <p className='text-center p-3 bg-green-200 text-l text-green-700 font-bold'>Copyright &copy; Phone-Hub 2026. All Rights Reserved. </p>
+        <p className='text-center p-3 bg-blue-200 text-l text-blue-700 font-bold'>Copyright &copy; Phone-Hub 2026. All Rights Reserved. </p>
     </div>
 
   )

@@ -68,8 +68,8 @@ function ProductList() {
         <>
             <div className='outer-container'>
                  <div>
-                    <h1>Kindly choose the phone you like from Phone-Hub</h1>
-                    <h3>List of available phones</h3>
+                    <h1>Kindly choose the products you like from BinaryTronics</h1>
+                    <h3>List of available products</h3>
 
                     {loading && <p>Loading...</p>}
                     {error && ( 

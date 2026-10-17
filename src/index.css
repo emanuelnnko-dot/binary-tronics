@@ -12,12 +12,24 @@
   --border-color-level-3: #ffdd99;
   --text-color-level-3: #fb8405;
 
-  --bg-color-level-4: #ffc180;
+  --bg-color-level-4: rgb(29, 29, 241);
   --border-color-level-4: #ffc180;
-  --text-color-level-4: #bf6506;
+  --text-color-level-4: rgb(101, 101, 248);
 
-  --bg-color-level-5: #ffc180;
-  --border-color-level-5: #ffc180;
+  --bg-color-level-5: rgb(25, 25, 154);
+  --border-color-level-5: blue;
+
+  --gray-color-level-1: ;
+  --gray-color-level-2: ;
+  --gray-color-level-3: ;
+  --gray-color-level-4: ;
+  --gray-color-level-5: ;
+
+  --blue-color-level-1: ;
+  --blue-color-level-2: ;
+  --blue-color-level-3: ;
+  --blue-color-level-4: ;
+  --blue-color-level-5: ;
 }
 
 * {
@@ -34,7 +46,7 @@ a {
 a.active{
   color: gren;
   /* background-color: #039003e7; */
-  border-bottom: 5px solid green;
+  border-bottom: 5px solid blue;
 }
 
 .shoppingBagContainer {
@@ -50,8 +62,8 @@ a.active{
   height: 24px;
   border-radius: 50%;
   text-align: center;
-  background-color: rgb(111, 210, 30);
-  color: rgb(2, 135, 2);
+  background-color: rgba(65, 65, 246, 0.492);
+  color: blue;
 }
 
 .outer-container {
@@ -205,9 +217,9 @@ h3 {
 }
 
 .product-details .counter * {
-  color: green;
+  color: blue;
   font-weight: 700;
-  border: 2px solid green;
+  border: 2px solid blue;
   padding: 3px 10px;
   width: 35px;
   text-align: center;
@@ -235,11 +247,11 @@ h3 {
 }
 
 .product-details button:hover {
-  border: 1px solid green;
+  border: 1px solid blue;
 }
 
 .product-details button p {
-  color: green;
+  color: blue;
   font-weight: 700;
   margin-left: 25px;
 }

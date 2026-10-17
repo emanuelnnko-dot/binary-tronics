@@ -6,15 +6,15 @@ import { NavLink } from 'react-router-dom'
 function Header() {
 
     return (
-        <div className="flex justify-center gap-30 p-5 bg-green-200 ">
-            <p className='text-3xl text-green-600 font-bold font-serif italic'>Phone-Hub</p>
-            <nav className="header flex gap-20 text-xl text-green-700 font-bold">
+        <div className="flex justify-center gap-35 p-5 bg-blue-200 ">
+            <p className='text-3xl text-blue-600 font-bold font-serif italic'>BinaryTronics</p>
+            <nav className="header flex gap-20 text-xl text-blue-700 font-bold">
                 <ul className="flex gap-3">
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/Products">Products</NavLink></li>
                     <li><NavLink to="/Cart">
                         <div className='shoppingBagContainer'>
-                            <FontAwesomeIcon icon={faBagShopping} size="lg" color="green" />
+                            <FontAwesomeIcon icon={faBagShopping} size="lg" color="blue" />
                             <p className="cartCount">0</p>
                         </div>                        
                     </NavLink></li>

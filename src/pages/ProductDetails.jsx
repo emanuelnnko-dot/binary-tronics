@@ -5,11 +5,12 @@ import React, { useEffect, useState } from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 
-function ProductDetailsComp() {
+function ProductDetails() {
     const {id} = useParams(); // The Id to find a specific products
     console.log(id);
 
     const [products, setProducts] = useState([]); // Manages products data from the server
+    // const [product, setProduct] = useState("");
     const [loading, setLoading] = useState(null);
     const [error, setError] = useState(null);
 
@@ -67,6 +68,7 @@ function ProductDetailsComp() {
                 console.log("Passing");
                 const response = await axios.get("http://localhost:5000/api/products");
                 console.log(response.data.products);
+                setProducts(response.data.products);
             } catch (error) {
 
             } finally {
@@ -79,6 +81,8 @@ function ProductDetailsComp() {
     console.log(products);
 
     const product = products.find(product => product.id === id);
+    // setProduct(products.find(product => product.id === id));
+
     console.log(product);
 
 
@@ -122,6 +126,10 @@ function ProductDetailsComp() {
         }
     }
 
+    if (product === undefined) {
+        return <div>Loading your profile...</div>;
+    }
+
   return (
 
     <div className="product-details">
@@ -131,6 +139,10 @@ function ProductDetailsComp() {
             <p className="text-red-500" > Error: {error}</p>
         )}
 
+        {/* {!product && (
+            return <p>Loading...</p>
+        )} */}
+        
         <div className="image-container">
             <img src={product.imageUrl} alt={product.name}/>
         </div>
@@ -159,4 +171,4 @@ function ProductDetailsComp() {
   );
 }
 
-export default ProductDetailsComp;
+export default ProductDetails;
