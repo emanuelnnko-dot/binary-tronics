@@ -51,12 +51,11 @@ function ProductList() {
         }
 
         try {
-            // setLoading(true);
+            setLoading(true);
             console.log(product);
             const response = await axios.post("http://localhost:5000/api/products", product);
             setProducts({...products, response});
             console.log(response.data.product);
-
         } catch (error) {
             setError(error.message || "Something went wrong");
         } finally {
@@ -65,11 +64,11 @@ function ProductList() {
     }
 
     return (
-        <>
-            <div className='outer-container'>
-                 <div>
-                    <h1>Kindly choose the products you like from BinaryTronics</h1>
-                    <h3>List of available products</h3>
+        <div>
+            <div>
+                <div>
+                    {/* <h1>Kindly choose the products you like from BinaryTronics</h1>
+                    <h3>List of available products</h3> */}
 
                     {loading && <p>Loading...</p>}
                     {error && ( 
@@ -104,7 +103,7 @@ function ProductList() {
                     <button type="submit">Add new product</button>
             </form>
 
-        </>
+        </div>
     )
 }
 

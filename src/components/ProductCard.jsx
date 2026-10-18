@@ -11,7 +11,7 @@ function ProductCard({product}) {
                 <div className="product-content">
                     <p className="product-name">Name: {product.name}</p>
                     <p>Brand: {product.brand}</p>
-                    <p>Price: KSh {product.price}</p>
+                    <p>Price: TSh {product.price}</p>
                 </div>
                 <p><Link to={`/ProductDetails/${product.id}`}>View details</Link></p>
             </div>

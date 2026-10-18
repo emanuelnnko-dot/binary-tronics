@@ -1,9 +1,22 @@
+import { useCartContext } from '@/context/CartContext'
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 function Header() {
+    const {cart} = useCartContext();
+    let productsQuantity = 0;
+
+    if (!cart) {
+        productsQuantity = 0;
+    } else {
+        cart.forEach(product => {
+            productsQuantity += product.quantity;
+        });
+    }
+
+    console.log(productsQuantity);
 
     return (
         <div className="flex justify-center gap-35 p-5 bg-blue-200 ">
@@ -15,7 +28,7 @@ function Header() {
                     <li><NavLink to="/Cart">
                         <div className='shoppingBagContainer'>
                             <FontAwesomeIcon icon={faBagShopping} size="lg" color="blue" />
-                            <p className="cartCount">0</p>
+                            <p className="cartCount">{productsQuantity}</p>
                         </div>                        
                     </NavLink></li>
                     

@@ -44,7 +44,7 @@ a {
 }
 
 a.active{
-  color: gren;
+  /* color: blue; */
   /* background-color: #039003e7; */
   border-bottom: 5px solid blue;
 }
@@ -57,13 +57,15 @@ a.active{
   position: absolute;
   top: -13px;
   right: -10px;
-  font-size: 17px;
+  font-size: 13px;
   width: 22px;
-  height: 24px;
+  height: 23px;
+  padding-top: 2px;
   border-radius: 50%;
   text-align: center;
   background-color: rgba(65, 65, 246, 0.492);
   color: blue;
+  z-index: 1;
 }
 
 .outer-container {
