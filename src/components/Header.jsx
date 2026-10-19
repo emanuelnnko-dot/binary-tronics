@@ -1,3 +1,4 @@
+import { useUserContext } from '@/context/AuthContext'
 import { useCartContext } from '@/context/CartContext'
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,6 +8,8 @@ import { NavLink } from 'react-router-dom'
 function Header() {
     const {cart} = useCartContext();
     let productsQuantity = 0;
+
+    const {user} = useUserContext();
 
     if (!cart) {
         productsQuantity = 0;
@@ -20,7 +23,7 @@ function Header() {
 
     return (
         <div className="flex justify-center gap-35 p-5 bg-blue-200 ">
-            <p className='text-3xl text-blue-600 font-bold font-serif italic'>BinaryTronics</p>
+            <p className='text-3xl text-blue-600 font-bold italic'>BinaryTronics</p>
             <nav className="header flex gap-20 text-xl text-blue-700 font-bold">
                 <ul className="flex gap-3">
                     <li><NavLink to="/">Home</NavLink></li>
@@ -34,8 +37,17 @@ function Header() {
                     
                 </ul>
                 <ul className="flex gap-3">
-                    <li><NavLink to="/Register">Register</NavLink></li>
-                    <li><NavLink to="/Login">Login</NavLink></li>
+                    {user ? (
+                        <>
+                            <li>{user.firstName}</li>
+                            <li><NavLink to="/Logout">Logout</NavLink></li>
+                        </>
+                        ) : (
+                        <>
+                            <li><NavLink to="/Register">Register</NavLink></li>
+                            <li><NavLink to="/Login">Login</NavLink></li>
+                        </>
+                    )}
                 </ul>
             </nav>
         </div>
