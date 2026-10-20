@@ -21,7 +21,7 @@ app.get('/api/products', (req, res) => {
 // Sample user data for visualization
 // {id: "c2576d53-e5c5-46e4-b6b5-8743ec59db64", email: "emanuelnnko@gmail.com", firstName: "Emanuel", lastName: "Nnko", password: 123}
 users = [
-        {"id": "c2576d53-e5c5-46e4-b6b5-8743ec59db64", "email": "emanuelnnko@gmail.com", "firstName": "Emanuel", "lastName": "Nnko", "password": 123}
+        {"id": "c2576d53-e5c5-46e4-b6b5-8743ec59db64", "email": "emanuelnnko@gmail.com", "firstName": "Emanuel", "lastName": "Nnko", "password": 123, "role": "admin"}
     ]
 
 app.post("/api/users/login", (req, res) => {

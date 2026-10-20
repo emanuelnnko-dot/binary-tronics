@@ -7,10 +7,10 @@ import { NavLink } from 'react-router-dom'
 
 function Header() {
     const {cart} = useCartContext();
-    let productsQuantity = 0;
-
     const {user} = useUserContext();
 
+    // Calculate products quantity in the cart
+    let productsQuantity = 0;
     if (!cart) {
         productsQuantity = 0;
     } else {

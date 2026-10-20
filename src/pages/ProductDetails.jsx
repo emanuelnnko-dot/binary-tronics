@@ -109,9 +109,9 @@ function ProductDetails() {
             
             <div className="buttons-container">
                 <div className="counter">
-                    <p onClick={() => {setquantity(prequantity => prequantity !== 0 ? prequantity - 1 : 0)}}> - </p> 
+                    <p onClick={() => {setquantity(prevQuantity => prevQuantity !== 0 ? prevQuantity - 1 : 0)}}> - </p> 
                     <p> {quantity} </p> 
-                    <p onClick={() => {setquantity(prequantity => prequantity + 1)}}> + </p>
+                    <p onClick={() => {setquantity(prevQuantity => prevQuantity + 1)}}> + </p>
                 </div>
                 <button onClick={addToCat} className="bg-green-300 border-green-500">
                     <FontAwesomeIcon icon={faBagShopping} size="lg" color="green" />

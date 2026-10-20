@@ -1,7 +1,7 @@
 import { useUserContext } from '@/context/AuthContext';
 import axios from 'axios';
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 function Login() {
   const [loginData, setLoginData] = useState({email: "", password: ""});
@@ -10,6 +10,12 @@ function Login() {
 
   const {login} = useUserContext();
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Extract the original path, or fallback to the home/dashboard page
+  const from = location.state?.from?.pathname || "/";
+
   function handleChange(e) {
     setLoginData(
       {...loginData, [e.target.name]: e.target.value}
@@ -17,7 +23,7 @@ function Login() {
   }
 
    //Simulate set user data in the context API and localstorage
-  const userData = {"id": "c2576d53-e5c5-46e4-b6b5-8743ec59db64", "email": "emanuelnnko@gmail.com", "firstName": "Emanuel", "lastName": "Nnko", "password": 123}
+  const userData = {"id": "c2576d53-e5c5-46e4-b6b5-8743ec59db64", "email": "emanuelnnko@gmail.com", "firstName": "Emanuel", "lastName": "Nnko", "password": 123, "role": "admin"};
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -30,6 +36,7 @@ function Login() {
       console.log(response.data.users);
       
       login(userData);
+      navigate(from, { replace: true });
     } catch (error) {
       setError(error.message || "Something went wrong");
     } finally {
