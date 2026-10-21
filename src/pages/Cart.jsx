@@ -26,7 +26,7 @@ export default function Cart() {
   
   return (
 
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-[570px] bg-white text-gray-900 px-35">
 
       {
         !cart.length > 0 ? (
@@ -62,24 +62,24 @@ export default function Cart() {
                 </section>
 
                 {/* Cart totals */}
-                <aside className="h-fit overflow-hidden rounded-xl bg-violet-600 text-white">
+                <aside className="h-fit overflow-hidden rounded-xl bg-blue-300 text-white border border-blue-300">
                   <div className="p-6 sm:p-7">
                     <h2 className="text-lg font-medium">Cart Subtotal ({productsQuantity} items)</h2>
-
                   </div>
-
                   <div className="border-t border-white/20 p-6 sm:p-7">
-                    <div className="flex items-center justify-between gap-3 text-sm">
-                      <span>Total</span>
-                      <span className="text-base font-medium">Tsh. {productsSubTotal}</span>
-                    </div>
+                      <div className="flex items-center justify-between gap-3 text-sm pb-2">
+                        <span>Total</span>
+                        <span className="text-base font-medium">Tsh. {productsSubTotal}</span>
+                      </div>
 
-                    <button
-                      type="button"
-                      className="mt-6 w-full rounded-lg bg-white px-5 py-4 text-sm font-semibold text-gray-900 transition hover:bg-gray-100"
-                    >
-                      <Link to="/checkout">Checkout</Link>
-                    </button>
+                      <Link to="/checkout">
+                          <button
+                            type="button"
+                            className="mt-6 w-full rounded-[25px] bg-blue-400 px-5 py-4 text-sm font-bold text-blue-700 transition hover:bg-blue-500"
+                          >
+                            Checkout
+                          </button>
+                      </Link>
                   </div>
                 </aside>
               </div>

@@ -24,8 +24,8 @@ function Header() {
     return (
         <div className="flex justify-center gap-35 p-5 bg-blue-200 ">
             <p className='text-3xl text-blue-600 font-bold italic'>BinaryTronics</p>
-            <nav className="header flex gap-20 text-xl text-blue-700 font-bold">
-                <ul className="flex gap-3">
+            <nav className="header flex gap-50 text-xl text-blue-700 font-bold">
+                <ul className="flex gap-15">
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/Products">Products</NavLink></li>
                     <li><NavLink to="/Cart">

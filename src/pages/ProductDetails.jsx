@@ -88,21 +88,21 @@ function ProductDetails() {
 
   return (
 
-    <div className="product-details">
+    <div className="product-details min-h-[570px] bg-gray-100">
         {loading && <p>Loading...</p>}
 
         {error && ( 
             <p className="text-red-500" > Error: {error}</p>
         )}
         
-        <div className="image-container">
+        <div className="max-h-[400px] image-container">
             <img src={product.imageUrl} alt={product.name}/>
         </div>
         <div className="">
             <div className="content">
                 <h4 className="text-3xl">Name: {product.name}</h4>
                 <p>Brand: {product.brand}</p>
-                <p>Price: <span className="text-2xl ">Ksh {product.price}</span></p>
+                <p>Price: <span className="text-2xl ">Tsh. {product.price}</span></p>
                 <p>Description: {product.description}
                 </p>
             </div>

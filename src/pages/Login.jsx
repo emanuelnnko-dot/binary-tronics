@@ -46,48 +46,47 @@ function Login() {
 
   return (
     <>
-      {loading && <p>Loading...</p>}
-      {error && ( 
-          <p className="text-red-500" > Error: {error}</p>
-      )}
+      <div className='min-h-[570px]'>
+        {loading && <p>Loading...</p>}
+        {error && ( 
+            <p className="text-red-500" > Error: {error}</p>
+        )}
 
-      <div className='form-container'>
-        <div className="form-main">
-              <div id="notification-message">
-              </div>
-              <div className="form-main-content">
-                <h1>Sign in to Your Account</h1>
-                <h3 id="fail-login-message">Fail to log in, your login email or password are incorrect</h3>
-                <form onSubmit={handleLogin}>
-                    <label htmlFor="login-email">Email</label> <br />
-                      <input type="text" id="login-email" name="email" value={loginData.email} onChange={handleChange} title="Please fill out this field." required /> <br />
-                      {console.log(loginData.email)}
-                      <p id="login-email-correction" className="input-correction-message"></p>
-                      
-                      <label htmlFor="login-password">Password</label> <br/>
-                      <input type="password" id="login-password" name="password" value={loginData.password} onChange={handleChange} title="Please fill out this field." required /> <br/>
-                      {console.log(loginData.password)}
-                      <p id="login-password-correction" className="input-correction-message"></p>
-                      <div className="login-form-middle-part">
-                          <div>
-                              <input type="checkbox" id="stay-signed" name="stay-signed" value="true" />                    
-                              <label htmlFor="stay-signed">Stay signed in</label>
-                          </div>
-                          <p><Link to="#">Forgot username</Link></p>
-                      </div>
-                      <button type="submit" id="login-btn" name="submit">Log in</button>
-                </form>
-                <div className="separating-lines">
-                      <hr/><p> or </p><hr/>
-                  </div>
-                  <Link to="google.com"><button className="google-button">Sing in with Google</button></Link>
+        <div className='form-container'>
+          <div className="form-main">
+                <div id="notification-message">
                 </div>
+                <div className="form-main-content">
+                  <h1>Sign in to Your Account</h1>
+                  <h3 id="fail-login-message">Fail to log in, your login email or password are incorrect</h3>
+                  <form onSubmit={handleLogin}>
+                      <label htmlFor="login-email">Email</label> <br />
+                        <input type="text" id="login-email" name="email" value={loginData.email} onChange={handleChange} title="Please fill out this field." required /> <br />
+                        {console.log(loginData.email)}
+                        <p id="login-email-correction" className="input-correction-message"></p>
+                        
+                        <label htmlFor="login-password">Password</label> <br/>
+                        <input type="password" id="login-password" name="password" value={loginData.password} onChange={handleChange} title="Please fill out this field." required /> <br/>
+                        {console.log(loginData.password)}
+                        <p id="login-password-correction" className="input-correction-message"></p>
+                        <div className="login-form-middle-part">
+                            <div>
+                                <input type="checkbox" id="stay-signed" name="stay-signed" value="true" />                    
+                                <label htmlFor="stay-signed">Stay signed in</label>
+                            </div>
+                            <p><Link to="#">Forgot username</Link></p>
+                        </div>
+                        <button type="submit" id="login-btn" name="submit">Log in</button>
+                  </form>
+                  <div className="separating-lines">
+                        <hr/><p> or </p><hr/>
+                    </div>
+                    <Link to="google.com"><button className="google-button">Sing in with Google</button></Link>
+                  </div>
+          </div>
         </div>
-      </div>
-                
+      </div>               
     </>
-
-    
   )
 }
 

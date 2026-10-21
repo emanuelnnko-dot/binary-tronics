@@ -49,7 +49,7 @@ export default function OrderSummarySidePanel() {
 
   return (
     // Outer container div
-    <div className="flex ">
+    <div className="flex min-h-[570px]">
 
         {/* left section ************************************************************************************** */}
 

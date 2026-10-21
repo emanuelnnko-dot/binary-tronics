@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --bg-color-level-1: #fff3e6;
+  /* --bg-color-level-1: #fff3e6;
   --border-color-level-1: #eae8e8fd;
 
   --bg-color-level-2: #feeddb;
@@ -10,16 +10,16 @@
 
   --bg-color-level-3: #ffdd99;
   --border-color-level-3: #ffdd99;
-  --text-color-level-3: #fb8405;
+  --text-color-level-3: #fb8405; */
 
-  --bg-color-level-4: rgb(29, 29, 241);
+  /* --bg-color-level-4: rgb(29, 29, 241);
   --border-color-level-4: #ffc180;
   --text-color-level-4: rgb(101, 101, 248);
 
   --bg-color-level-5: rgb(25, 25, 154);
-  --border-color-level-5: blue;
+  --border-color-level-5: blue; */ 
 
-  --gray-color-level-1: ;
+  --gray-color-level-1: #F3F4F6;
   --gray-color-level-2: ;
   --gray-color-level-3: ;
   --gray-color-level-4: ;
@@ -30,6 +30,10 @@
   --blue-color-level-3: ;
   --blue-color-level-4: ;
   --blue-color-level-5: ;
+}
+
+body {
+  background-color: var(--gray-color-level-1);
 }
 
 * {
@@ -48,6 +52,61 @@ a.active{
   /* background-color: #039003e7; */
   border-bottom: 5px solid blue;
 }
+
+
+
+
+#search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 47%; */
+    max-width: 500px;
+    min-width: 300px;
+    padding: 2px 2px;
+    /* margin-left: 20px; */
+    margin: 10px auto;
+    border: 2px solid rgba(211, 213, 215, 0.515);
+    border-radius: 20px;
+    background-color: #f5f8fa;
+}
+
+#search-form:hover {
+    border: 2px solid rgba(70, 36, 125, 0.588);
+    box-shadow: 0px 7px 4px rgba(211, 213, 215, 0.515);
+}
+
+#search-form button {
+    /* display: inline-flex; */
+    padding: 5px 11px 5px 17px;
+    font-size: 1rem;
+    margin-left: 2px;
+    border-radius: 17px;
+    background-color: rgb(125 46 255);
+    border: 1px solid rgb(125 46 255);
+}
+
+#search-form button:hover {
+    background-color: rgb(94, 16, 218);
+    cursor: pointer;
+}
+
+#search-form input {
+    width: 85%;
+    font-size: 1rem;
+    height: 26px;
+    margin: 0 10px;
+    background-color: #f5f8fa;
+    border-style: none;
+    padding-left: 10px;
+}
+
+#search-form input:focus {
+    border-style: none;
+    outline-style: none;
+}
+
+
 
 .shoppingBagContainer {
   position: relative;
@@ -77,9 +136,6 @@ a.active{
 h1, h3 {
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
-  background-color: var(--bg-color-level-3);
-  color: var(--text-color-level-2);
-  /* border: 1px solid var(--border-color-level-2); */
 }
 
 h1 {
@@ -140,8 +196,12 @@ h3 {
   margin: 15px;
   padding: 10px;
   border-radius: 10px;
-  background-color: var(--bg-color-level-2);
-  border: 1px solid var(--border-color-level-2);
+  background-color: white;
+  /* border: 1px solid blue; */
+}
+
+.product-card .product-content {
+  width: 
 }
 
 .image-container {
@@ -178,10 +238,6 @@ h3 {
   /* border: 1px solid blue; */
 }
 
-.product-details *{
-  /* border: 1px solid blue; */
-}
-
 .product-details .image-container {
   flex: 1;
   max-width: 350px;
@@ -197,8 +253,10 @@ h3 {
   flex: 1;
   padding: 10px;
   margin: 15px 0px;
-  border: 1px solid var(--border-color-level-2);
+  border: 1px solid rgba(128, 128, 128, 0.558);
   border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(108, 107, 107, 0.516);
   /* border: 1px solid blue; */
 }
 

@@ -6,7 +6,11 @@ function Logout() {
 
     logout()
     return (
-        <div>You have Logged out</div>
+        <div className="min-h-[570px]">
+            <div className=" flex justify-center pt-8">
+                 <h4 className="bg-blue-100 text-blue-500 p-5 text-4xl border border-blue-300 rounded">Your have logged out</h4>
+          </div>
+        </div>
     )
 }
 
