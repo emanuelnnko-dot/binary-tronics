@@ -66,24 +66,12 @@ export default function Cart() {
                   <div className="p-6 sm:p-7">
                     <h2 className="text-lg font-medium">Cart Subtotal ({productsQuantity} items)</h2>
 
-                    {/* <div className="mt-6 space-y-5">
-                      <div className="flex items-center justify-between gap-3 text-sm">
-                        <span className="text-violet-200">Subtotal</span>
-                        <span className="font-medium">Tsh 750000</span>
-                      </div>
-
-                      <div className="flex items-center justify-between gap-3 text-sm">
-                        <span className="text-violet-200">Delivering</span>
-                        <span className="font-medium">Tsh 30000</span>
-                      </div>
-                    </div> */}
-
                   </div>
 
                   <div className="border-t border-white/20 p-6 sm:p-7">
                     <div className="flex items-center justify-between gap-3 text-sm">
                       <span>Total</span>
-                      <span className="text-base font-medium">{productsSubTotal}</span>
+                      <span className="text-base font-medium">Tsh. {productsSubTotal}</span>
                     </div>
 
                     <button

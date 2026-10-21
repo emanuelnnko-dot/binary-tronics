@@ -4,7 +4,7 @@ import React from 'react'
 function Logout() {
     const {logout} = useUserContext();
 
-    logout();
+    logout()
     return (
         <div>You have Logged out</div>
     )

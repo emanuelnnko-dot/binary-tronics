@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <div className="footer ">
-        <div className='footer-content bg-blue-100 text-l text-blue-600 font-bold'>
+        <div className='footer-content bg-blue-200 text-l text-blue-600 font-bold'>
             <div>
                 <p className='text-3xl text-blue-600 font-bold italic'>BinaryTronics</p>
                 <p>Address: Dar es Salaam, Tanzania.</p>
@@ -35,7 +35,7 @@ function Footer() {
                 </nav>
             </div>
         </div>
-        <p className='text-center p-3 bg-blue-200 text-l text-blue-700 font-bold'>Copyright &copy; BinaryTronics 2026. All Rights Reserved. </p>
+        <p className='text-center p-3 bg-blue-100 text-l text-blue-500 font-bold'>Copyright &copy; BinaryTronics 2026. All Rights Reserved. </p>
     </div>
 
   )
